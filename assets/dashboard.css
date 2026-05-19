@@ -1,0 +1,171 @@
+/* Customer Churn Intelligence Platform - Dark Glassmorphism CSS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a1a !important;
+    color: #e2e2f0 !important;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: rgba(124,58,237,0.4); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(124,58,237,0.7); }
+
+/* KPI Cards */
+.kpi-card {
+    background: rgba(18,18,42,0.95);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    height: 100%;
+}
+
+.kpi-card:hover {
+    border-color: rgba(124,58,237,0.35);
+    box-shadow: 0 0 20px rgba(124,58,237,0.12);
+}
+
+.kpi-label {
+    color: #6b7280;
+    font-size: 0.78rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    margin-top: 0;
+}
+
+/* Tabs */
+.nav-tabs .nav-link {
+    color: #6b7280 !important;
+    border: none !important;
+    border-bottom: 2px solid transparent !important;
+    background: transparent !important;
+    padding: 10px 18px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #e2e2f0 !important;
+    border-bottom-color: rgba(124,58,237,0.4) !important;
+}
+
+.nav-tabs .nav-link.active {
+    color: #7c3aed !important;
+    border-bottom-color: #7c3aed !important;
+    font-weight: 600;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+/* Dark Dropdowns */
+.dark-dropdown .Select-control {
+    background-color: rgba(18,18,42,0.95) !important;
+    border-color: rgba(255,255,255,0.12) !important;
+    color: #e2e2f0 !important;
+    border-radius: 8px;
+}
+
+.dark-dropdown .Select-menu-outer {
+    background-color: #12122a !important;
+    border-color: rgba(255,255,255,0.12) !important;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+.dark-dropdown .Select-option {
+    background-color: transparent !important;
+    color: #e2e2f0 !important;
+}
+
+.dark-dropdown .Select-option:hover,
+.dark-dropdown .Select-option.is-focused {
+    background-color: rgba(124,58,237,0.15) !important;
+}
+
+.dark-dropdown .Select-option.is-selected {
+    background-color: rgba(124,58,237,0.25) !important;
+}
+
+.dark-dropdown .Select-placeholder,
+.dark-dropdown .Select-value-label {
+    color: #e2e2f0 !important;
+}
+
+.dark-dropdown .Select-arrow {
+    border-top-color: #6b7280 !important;
+}
+
+/* VirtualizedSelect / newer Dash dropdown */
+.Select-control {
+    background-color: rgba(18,18,42,0.95) !important;
+    border: 1px solid rgba(255,255,255,0.12) !important;
+}
+
+/* Sliders */
+.dark-slider .rc-slider-track {
+    background-color: #7c3aed !important;
+}
+
+.dark-slider .rc-slider-handle {
+    border-color: #7c3aed !important;
+    background-color: #7c3aed !important;
+    box-shadow: 0 0 0 4px rgba(124,58,237,0.25) !important;
+}
+
+.dark-slider .rc-slider-rail {
+    background-color: rgba(255,255,255,0.1) !important;
+}
+
+/* Graphs - remove backgrounds */
+.js-plotly-plot .plotly .bg {
+    fill: transparent !important;
+}
+
+/* Dash graph containers */
+.dash-graph {
+    background: rgba(18,18,42,0.95);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Radio items */
+.form-check-input:checked {
+    background-color: #7c3aed !important;
+    border-color: #7c3aed !important;
+}
+
+/* Toast */
+.toast {
+    background-color: rgba(18,18,42,0.98) !important;
+    border-color: rgba(124,58,237,0.4) !important;
+    color: #e2e2f0 !important;
+}
+
+/* Container padding */
+.container-fluid {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+/* Button */
+.btn-outline-primary {
+    border-color: #7c3aed !important;
+    color: #7c3aed !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: rgba(124,58,237,0.15) !important;
+    color: #7c3aed !important;
+}
