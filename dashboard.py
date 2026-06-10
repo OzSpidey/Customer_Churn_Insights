@@ -1,4 +1,4 @@
-"""Customer Churn Intelligence Platform - 5-tab Plotly Dash dashboard."""
+﻿"""Customer Churn Intelligence Platform - 5-tab Plotly Dash dashboard."""
 
 import os
 import shap
@@ -1128,4 +1128,5 @@ def update_shap_tab(tab):
 # ===========================================================================
 if __name__ == '__main__':
     print('Customer Churn Intelligence Platform  ->  http://localhost:8052')
-    app.run(debug=False, port=8052, host='0.0.0.0')
+    app.run(debug=False, port=int(os.environ.get('PORT', 8052)), host='0.0.0.0')
+
