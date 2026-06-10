@@ -1,6 +1,6 @@
 # Customer Churn Intelligence Platform
 
-> End-to-end machine learning dashboard for customer churn prediction — XGBoost model with SHAP explainability, interactive What-If simulator, full model diagnostics, and segment analysis. Built on the IBM Telco dataset (7,043 customers).
+> End-to-end machine learning dashboard for customer churn prediction, XGBoost model with SHAP explainability, interactive What-If simulator, full model diagnostics, and segment analysis. Built on the IBM Telco dataset (7,043 customers).
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat&logo=python&logoColor=white)
 ![Dash](https://img.shields.io/badge/Plotly%20Dash-4.x-00B4D8?style=flat&logo=plotly&logoColor=white)
@@ -29,7 +29,7 @@
 ## Features
 
 ### 📈 Executive Overview
-Five KPI cards — Total Customers, Churn Rate, Monthly Revenue at Risk, Avg Tenure, Avg Monthly Charge — with a live churn rate gauge, churned vs retained donut, churn rate by contract type bar chart, and customer distribution by tenure segment (0–12 months through 60+).
+Five KPI cards, Total Customers, Churn Rate, Monthly Revenue at Risk, Avg Tenure, Avg Monthly Charge, with a live churn rate gauge, churned vs retained donut, churn rate by contract type bar chart, and customer distribution by tenure segment (0–12 months through 60+).
 
 ### 🔍 Segment Analysis
 Dropdown-driven segment explorer: select any categorical feature (Contract, Payment Method, Internet Service, etc.) and instantly see churn rate % per segment. Also includes a Contract × Internet Service churn heatmap, monthly charges violin distribution split by churn status, and tenure histogram by churn outcome.
@@ -38,15 +38,15 @@ Dropdown-driven segment explorer: select any categorical feature (Contract, Paym
 Full ML diagnostics in one view: Accuracy (77.5%), Precision, Recall, F1, AUC-ROC (0.824) metric cards; annotated confusion matrix heatmap; ROC curve with AUC annotation; Precision-Recall curve; and top-15 XGBoost feature importances bar chart.
 
 ### ⚡ What-If Simulator
-Interactive customer profile builder — adjust tenure, monthly charges, contract type, internet service, and 10+ other features via sliders and radio buttons. Instantly updates:
+Interactive customer profile builder, adjust tenure, monthly charges, contract type, internet service, and 10+ other features via sliders and radio buttons. Instantly updates:
 - **Churn probability gauge** (0–100%) with color coding
 - **Risk category badge** (High Risk / Medium Risk / Low Risk)
 - **Monthly revenue at risk** for this customer
-- **Top 3 SHAP risk factors** — which specific features are driving the prediction and by how much
+- **Top 3 SHAP risk factors**, which specific features are driving the prediction and by how much
 
 ### 🧠 Feature Importance & SHAP
 - Global SHAP importance bar chart (mean |SHAP| per feature, top 20)
-- SHAP beeswarm scatter plot — top 10 features × 100 sampled customers, x-axis = SHAP value, colored by feature value
+- SHAP beeswarm scatter plot, top 10 features × 100 sampled customers, x-axis = SHAP value, colored by feature value
 - Numeric feature correlation heatmap
 - "Most impactful features for churn reduction" table with avg SHAP for churned vs retained and actionable recommendation
 
@@ -64,9 +64,9 @@ Interactive customer profile builder — adjust tenure, monthly charges, contrac
 
 **Architecture:** sklearn `Pipeline` with `ColumnTransformer` (StandardScaler for numerics, OneHotEncoder for categoricals) feeding into `XGBClassifier` (300 estimators, max_depth=5, learning_rate=0.05, subsample=0.8).
 
-**Explainability:** SHAP `TreeExplainer` — global importances computed on a 500-row sample; per-customer SHAP computed live in the What-If simulator for instant feedback.
+**Explainability:** SHAP `TreeExplainer`, global importances computed on a 500-row sample; per-customer SHAP computed live in the What-If simulator for instant feedback.
 
-Model and SHAP values are cached to `data/model.pkl` and `data/shap_values.pkl` on first run — subsequent startups load in seconds.
+Model and SHAP values are cached to `data/model.pkl` and `data/shap_values.pkl` on first run, subsequent startups load in seconds.
 
 ---
 
@@ -89,7 +89,7 @@ python dashboard.py
 
 ```
 churn-predictor-dashboard/
-├── dashboard.py        # Plotly Dash app — 5 tabs, all callbacks
+├── dashboard.py        # Plotly Dash app, 5 tabs, all callbacks
 ├── config.py           # Feature lists, file paths, color palette
 ├── data_loader.py      # CSV download, cleaning, summary stats
 ├── model.py            # XGBoost pipeline, SHAP computation, metrics
@@ -103,7 +103,7 @@ churn-predictor-dashboard/
 
 ## Dataset
 
-**IBM Telco Customer Churn** — 7,043 customers, 20 features, 26.6% churn rate.
+**IBM Telco Customer Churn**, 7,043 customers, 20 features, 26.6% churn rate.
 
 | Feature Group | Features |
 |---|---|
@@ -118,9 +118,9 @@ Source: [IBM Sample Data](https://raw.githubusercontent.com/IBM/telco-customer-c
 
 ## Key Findings
 
-- **Month-to-month contracts** churn at **42.7%** vs 2.8% for two-year contracts — the single biggest retention lever
-- **Fiber optic internet** customers churn more than DSL (~30% vs ~19%) — despite higher spend, likely due to price sensitivity
-- **First 12 months** are highest risk — churn drops dramatically after year 2
+- **Month-to-month contracts** churn at **42.7%** vs 2.8% for two-year contracts, the single biggest retention lever
+- **Fiber optic internet** customers churn more than DSL (~30% vs ~19%), despite higher spend, likely due to price sensitivity
+- **First 12 months** are highest risk, churn drops dramatically after year 2
 - **Electronic check** payment method correlates strongly with churn (top SHAP factor)
 - Adding **OnlineSecurity** or **TechSupport** reduces churn probability by ~10 percentage points on average
 
@@ -144,9 +144,9 @@ requests>=2.31.0
 
 ## Related Projects
 
-- [Clinical Trial Intelligence Dashboard](https://github.com/OzSpidey/clinical-trial-dashboard) — Live ClinicalTrials.gov data across 8 disease areas
-- [Stock Sentiment Dashboard](https://github.com/OzSpidey/stock-sentiment-dashboard) — Real-time NLP sentiment for 15 stocks
-- [IPL Analytics Dashboard](https://github.com/OzSpidey/ipl-analytics-dashboard) — 19 seasons of IPL cricket statistics
+- [Clinical Trial Intelligence Dashboard](https://github.com/OzSpidey/clinical-trial-dashboard), Live ClinicalTrials.gov data across 8 disease areas
+- [Stock Sentiment Dashboard](https://github.com/OzSpidey/stock-sentiment-dashboard), Real-time NLP sentiment for 15 stocks
+- [IPL Analytics Dashboard](https://github.com/OzSpidey/ipl-analytics-dashboard), 19 seasons of IPL cricket statistics
 
 ---
 
