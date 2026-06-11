@@ -1,4 +1,6 @@
-# Customer Churn Intelligence Platform
+﻿# Customer Churn Intelligence Platform
+
+**Live Demo:** https://customer-churn-insights.onrender.com
 
 > End-to-end machine learning dashboard for customer churn prediction, XGBoost model with SHAP explainability, interactive What-If simulator, full model diagnostics, and segment analysis. Built on the IBM Telco dataset (7,043 customers).
 
@@ -28,25 +30,25 @@
 
 ## Features
 
-### 📈 Executive Overview
-Five KPI cards, Total Customers, Churn Rate, Monthly Revenue at Risk, Avg Tenure, Avg Monthly Charge, with a live churn rate gauge, churned vs retained donut, churn rate by contract type bar chart, and customer distribution by tenure segment (0–12 months through 60+).
+### ðŸ“ˆ Executive Overview
+Five KPI cards, Total Customers, Churn Rate, Monthly Revenue at Risk, Avg Tenure, Avg Monthly Charge, with a live churn rate gauge, churned vs retained donut, churn rate by contract type bar chart, and customer distribution by tenure segment (0â€“12 months through 60+).
 
-### 🔍 Segment Analysis
-Dropdown-driven segment explorer: select any categorical feature (Contract, Payment Method, Internet Service, etc.) and instantly see churn rate % per segment. Also includes a Contract × Internet Service churn heatmap, monthly charges violin distribution split by churn status, and tenure histogram by churn outcome.
+### ðŸ” Segment Analysis
+Dropdown-driven segment explorer: select any categorical feature (Contract, Payment Method, Internet Service, etc.) and instantly see churn rate % per segment. Also includes a Contract Ã— Internet Service churn heatmap, monthly charges violin distribution split by churn status, and tenure histogram by churn outcome.
 
-### 🎯 Model Performance
+### ðŸŽ¯ Model Performance
 Full ML diagnostics in one view: Accuracy (77.5%), Precision, Recall, F1, AUC-ROC (0.824) metric cards; annotated confusion matrix heatmap; ROC curve with AUC annotation; Precision-Recall curve; and top-15 XGBoost feature importances bar chart.
 
-### ⚡ What-If Simulator
+### âš¡ What-If Simulator
 Interactive customer profile builder, adjust tenure, monthly charges, contract type, internet service, and 10+ other features via sliders and radio buttons. Instantly updates:
-- **Churn probability gauge** (0–100%) with color coding
+- **Churn probability gauge** (0â€“100%) with color coding
 - **Risk category badge** (High Risk / Medium Risk / Low Risk)
 - **Monthly revenue at risk** for this customer
 - **Top 3 SHAP risk factors**, which specific features are driving the prediction and by how much
 
-### 🧠 Feature Importance & SHAP
+### ðŸ§  Feature Importance & SHAP
 - Global SHAP importance bar chart (mean |SHAP| per feature, top 20)
-- SHAP beeswarm scatter plot, top 10 features × 100 sampled customers, x-axis = SHAP value, colored by feature value
+- SHAP beeswarm scatter plot, top 10 features Ã— 100 sampled customers, x-axis = SHAP value, colored by feature value
 - Numeric feature correlation heatmap
 - "Most impactful features for churn reduction" table with avg SHAP for churned vs retained and actionable recommendation
 
@@ -81,7 +83,7 @@ python dashboard.py
 # Open http://localhost:8052
 ```
 
-**First run:** downloads the IBM Telco dataset (~1 MB) and trains the XGBoost model (~1–2 minutes). All subsequent runs load from cache instantly.
+**First run:** downloads the IBM Telco dataset (~1 MB) and trains the XGBoost model (~1â€“2 minutes). All subsequent runs load from cache instantly.
 
 ---
 
@@ -89,14 +91,14 @@ python dashboard.py
 
 ```
 churn-predictor-dashboard/
-├── dashboard.py        # Plotly Dash app, 5 tabs, all callbacks
-├── config.py           # Feature lists, file paths, color palette
-├── data_loader.py      # CSV download, cleaning, summary stats
-├── model.py            # XGBoost pipeline, SHAP computation, metrics
-├── assets/
-│   └── dashboard.css   # Dark glassmorphism theme
-├── data/               # Auto-created; holds CSV + model pkl (gitignored)
-└── requirements.txt
+â”œâ”€â”€ dashboard.py        # Plotly Dash app, 5 tabs, all callbacks
+â”œâ”€â”€ config.py           # Feature lists, file paths, color palette
+â”œâ”€â”€ data_loader.py      # CSV download, cleaning, summary stats
+â”œâ”€â”€ model.py            # XGBoost pipeline, SHAP computation, metrics
+â”œâ”€â”€ assets/
+â”‚   â””â”€â”€ dashboard.css   # Dark glassmorphism theme
+â”œâ”€â”€ data/               # Auto-created; holds CSV + model pkl (gitignored)
+â””â”€â”€ requirements.txt
 ```
 
 ---
@@ -150,4 +152,5 @@ requests>=2.31.0
 
 ---
 
-*Built with Plotly Dash · XGBoost · SHAP · IBM Telco Dataset*
+*Built with Plotly Dash Â· XGBoost Â· SHAP Â· IBM Telco Dataset*
+
