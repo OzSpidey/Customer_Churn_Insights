@@ -41,6 +41,7 @@ def _build_pipeline() -> Pipeline:
         subsample=0.8,
         colsample_bytree=0.8,
         eval_metric="logloss",
+        base_score=0.5,
         random_state=42,
     )
     return Pipeline([("preprocessor", preprocessor), ("classifier", classifier)])
